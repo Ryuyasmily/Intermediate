@@ -1,0 +1,1443 @@
+/*共通部分*/
+body{
+  font-family:"Hiragino Kaku Gothic Pro",sans-serif;
+  color:#333;
+}
+
+a{
+  text-decoration:none;
+  color:#333;
+  display: block;
+}
+
+
+
+/*ヘッダー部分*/
+
+header{
+  background-color:white;
+  width:100%;
+  height:75px;
+  position:fixed;
+  z-index:20;
+}
+
+
+.header-flex{
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left{
+  display: flex;
+  margin-left:15px;
+}
+
+.header-h3{
+  padding-top:38px;
+  letter-spacing:1.5px;
+}
+
+.header-image{
+  padding-top:15px;
+}
+
+
+.header-left img{
+  width:125px;
+  height:auto;
+}
+
+header h3{
+  font-size:14px;
+}
+
+/*ヘッダーお問い合わせ*/
+
+.header-document{
+  display: none;
+  background-color:#DA6B64;
+  width:100px;
+  height:75px;
+  position:relative;
+}
+
+.header-document img{
+  margin-left:32px;
+  margin-top:10px;
+}
+
+.header-document p{
+  text-align: center;
+  font-size:12px;
+  color:#eee;
+}
+
+
+.header-right a{
+  font-size:14px;
+  background-color:#da6b64;
+  padding:15px 40px;
+  border-radius:25px;
+  color:#fff;
+  margin-top:15px;
+  margin-right:15px;
+}
+
+.header-right a:hover{
+  opacity:0.6;
+}
+/*メイン画像部分*/
+
+.logo-large img{
+  width:320px;
+  margin:10px 0;
+}
+
+.main-wrapper{
+  text-align: center; 
+}
+
+.center{
+  width:100%;
+  height:auto;
+  padding:100px 0;
+  background-image:url("./img/main.jpg");
+  background-size:cover;
+  background-position: center;
+}
+
+.main-title{
+  font-size :28px;
+  line-height:45px;
+}
+
+.main-title h1{
+  margin-bottom:10px;
+}
+
+.main-mgt{
+  padding-top:25px;
+}
+
+.explain{
+  font-size:20px;
+  line-height:22px;
+}
+
+/*お問い合わせ資料請求*/
+
+.document-wrapper{
+  padding:35px 0 30px 0;
+  background-color:#ECB94D;
+  text-align: center;
+  color: #fff;
+}
+
+.document-theme{
+  padding-bottom:15px;
+}
+
+.document-theme h2{
+  font-size:22px;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+
+
+.document-pdtb{
+  width:45%;
+  margin:0 auto;
+  background-color: white;
+  border-radius:5px;
+  color:#C7254E;
+  letter-spacing: 3px;
+  padding:10px 0px;
+}
+
+.documentation{
+  width:85%;
+  margin:0 auto;
+  margin-bottom:50px;
+  padding:35px 0 0 0;
+}
+
+.document-a{
+  background-color: #DA6B64;
+  color:white;
+  padding:35px 0px;
+  border-radius:35px;
+  font-size:24px;
+  font-weight: bold;
+  letter-spacing:2px;
+}
+
+.document-a:hover{
+  opacity:0.6;
+}
+
+.document-explain p{
+  font-size:20px;
+  font-weight:bold;
+  padding:10px 0 30px 0;
+}
+
+/*ドキュメントフレックス（いいね ツイート シェア）*/
+
+.document-link{
+  display: flex;
+  width:230px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.document-link a{
+  font-size:12px;
+  color:white;
+  padding:5px;
+}
+
+.document-link a:hover{
+  opacity:0.7;
+}
+
+
+/*アイコンと文字に距離を空ける*/
+.fab,.far{
+  margin-right:5px;
+}
+
+#twitter{
+  background:#1C95E0;
+}
+
+#good{
+  background: #1877F2;
+}
+
+#share{
+  background: #1877F2;
+}
+
+/*エンジニアとして本当の自由を手に入れるためには～説明*/
+
+.second-wrapper{
+  background-color:white;
+  text-align: center;
+  padding:20px 0 180px 0;
+  background-image:url("./img/introbottom.jpg");
+  background-position: center;
+  background-size:cover;
+}
+
+.second-wrapper h2{
+  font-size:28px;
+  letter-spacing: 1.5px;
+}
+
+.second-pdtb{
+  margin:20px 0 50px 0;
+}
+
+/*paddingを入れる理由はabsoluteをする時にpadding後の範囲外からスタートできる為*/
+
+/*事前に文字がどのぐらいの幅があるかを調べてスタートさせたい幅に合わせて
+widthを少し長めになるように指定してあげる*/
+.test{
+  width:850px;
+  padding:30px 10px;
+  margin:0 auto;
+  position:relative;
+}
+
+/*widthとheightで長さをどのぐらいにするか指定する*/
+/*幅確認は検証使えば見れる*/
+
+.test::before,.test::after{
+  width:40px;
+  height:40px;
+  content:"";
+  position:absolute;
+}
+
+/*左上と右下の線作り*/
+
+.test::before{
+  top:0;
+  left:0;
+  border-top:5px solid #ECB94D;
+  border-left:5px solid #ECB94D;
+}
+
+.test::after{
+  bottom:0;
+  right:0;
+  border-bottom:5px solid #ECB94D;
+  border-right:5px solid #ECB94D;
+}
+
+/*説明部分*/
+
+.explain1{
+  padding:20px 0;
+  letter-spacing: 1.5px;
+}
+
+.explain1 p{
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.explain1 .span{
+  font-weight:bold;
+  line-height: 1;
+  display: inline-block;
+  background:linear-gradient(transparent 60%, #EBB94D 50%);
+}
+
+
+/*iSara説明部分*/
+
+.isara-explain{
+  padding:85px 0 60px 0;
+  text-align: center;
+  background-color:#FEF5E0;
+}
+
+.isara-explain h2{
+  font-size: 28px;
+}
+
+.isara-explain .focus{
+  padding:50px 0 35px 0;
+  font-size:20px;
+  letter-spacing: 1.5px;
+}
+
+/*上と同じようにやるが、疑似要素の幅を広めに変える必要がある*/
+/*なので今回は950pxを置いて幅を持たせてあげてスタート地点をずらす*/
+
+.test2{
+  width:950px;
+  margin:0 auto;
+  position:relative;
+  padding:25px 0;
+}
+
+
+
+.test2::before,.test2::after{
+  width:40px;
+  height:40px;
+  content:"";
+  position:absolute;
+}
+
+.test2::before{
+  top:0;
+  left:0;
+  border-top:5px solid #EBB94D;
+  border-left:5px solid #EBB94D;
+}
+
+.test2::after{
+  bottom:0;
+  right:0;
+  border-bottom:5px solid #EBB94D;
+  border-right:5px solid #EBB94D;
+}
+
+/*スキル説明*/
+
+.five-skills{
+  width:95%;
+  margin:0 auto;
+  border:3px solid #EBB94D;
+  text-align: center;
+  background-color: #fff;
+  border-radius:5px;
+}
+
+.five-skills h2{
+  font-size:20px;
+  padding:30px 0 35px 0;
+  letter-spacing: 2px;
+}
+
+/*均等に横並びにするよ。*/
+
+.skill-flex{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:45px;
+  width:60%;
+  margin: 0 auto;
+}
+
+
+/**/
+.isara-teach{
+  background-image:url("./img/aboutsecondbg.jpg");
+  background-size: cover;
+  padding-top:60px 0 40px 0;
+  text-align: center;
+  color:white;
+}
+
+.isara-teach h2{
+  letter-spacing: 2px;
+}
+
+.teach-title{
+  padding-top:60px;
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.teach-title-sub{
+  font-size:20px;
+  line-height:44px;
+}
+
+.teach-title-sub span{
+  color:#EBB94D;
+}
+
+/*display:flexして均等にする*/
+
+.step-flex{
+  display: flex;
+  justify-content: space-between;
+  width:96%;
+  margin:0 auto;
+  padding:20px 0 40px 0;
+}
+
+.isara-step{
+  width:32%;
+  color:#333;
+  padding-top:30px;
+  background-color: #fff;
+  border-radius:5px;
+}
+
+.isara-step h2{
+  color:white;
+  background-color:#EBB94D;
+  width:75%;
+  margin:0 auto;
+  border-radius:5px;
+  padding:5px 0;
+}
+
+.isara-step p{
+  margin-bottom:20px;
+}
+
+.title-pdg{
+  padding-bottom:30px;
+}
+
+.four{
+  font-size:14px;
+}
+
+.six{
+  font-size:16px;
+  font-weight: bold;
+}
+
+.blue-explain{
+  width:100%;
+  padding:40px 0;
+  background-color:#016EA9;
+  font-size:22px;
+  line-height: 32px;
+}
+
+.blue-explain span{
+  color:#EBB94D;
+}
+
+/*イサラで学べる事*/
+
+.isara-learn{
+  text-align: center;
+}
+
+.isara-learn h2{
+  font-size: 30px;
+  line-height:40px;
+  margin:25px 0 50px 0;
+}
+
+.learn-text p{
+  line-height:32px;
+  font-size:20px;
+  margin-bottom:40px;
+}
+
+/*マックスの幅を決めて横並びにする*/
+
+.learn-flex{
+  max-width:900px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+}
+
+.flex-child{
+  width:22%;
+}
+
+.flex-child img{
+  width:100%;
+}
+
+.sub-text{
+  margin:35px 0 50px 0;
+  font-size:18px;
+  font-weight:bold;
+  line-height:32px;
+}
+
+/*イサラに入るメリット*/
+
+.isara-merit{
+  background:#FEF5E0;
+  text-align: center;
+  padding:60px 0 40px 0;
+}
+
+.merit-text{
+  max-width:850px;
+  margin:0 auto;
+  letter-spacing: 2.5px;
+  position:relative;
+  padding:15px;
+}
+
+/*疑似要素を使ってどんなものを作るかを決める*/
+.merit-text::before,.merit-text::after{
+  content:"";
+  width:50px;
+  height:50px;
+  position:absolute;
+}
+
+/*左上の線を指定*/
+.merit-text::before{
+  top:0;
+  left:0;
+  border-top:5px solid #EBB94D;
+  border-left:5px solid #EBB94D;
+}
+
+/*左上の線を指定*/
+.merit-text::after{
+  bottom:0;
+  right:0;
+  border-bottom:5px solid #EBB94D;
+  border-right:5px solid #EBB94D;
+}
+
+
+.merit-text1{
+  font-size: 20px;
+  line-height:40px;
+}
+.merit-text2{
+  font-size: 28px;
+}
+
+/*メリットパートの画像をフレックスさせる*/
+
+.merit-flex{
+  max-width:1150px;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-between;
+  margin-top:30px;
+}
+
+.merit-child{
+  width:30%;
+}
+
+.merit-child img{
+  width:100%;
+}
+
+
+
+.merit-color{
+  color:#EBB94D;
+  line-height: 32px;
+  font-size:24px;
+  font-weight:bold;
+  text-align:left;
+}
+
+.merit-sub{
+  font-size:18px;
+  text-align:left;
+}
+
+.suppomgt{
+  margin:40px 0;
+}
+
+.support{
+  max-width:1150px;
+  background-color:#fff;
+  padding:40px 0 50px 0;
+  border:3px solid #EBB94D;
+  margin:0 auto;
+}
+
+.support h3{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom:20px;
+}
+
+.support p{
+  font-size:14px;
+  margin-bottom:10px;
+  font-weight: bold;
+}
+
+.support h2{
+  font-size:28px;
+  line-height:45px;
+  color:#EBB94e;
+  margin-bottom:20px;
+}
+
+.support-text{
+  max-width:1050px;
+  width:100%;
+  margin:0 auto;
+  font-size:15px;
+}
+
+/*創業フリーランスメンバー*/
+
+.member-intro{
+  background-image:url("./img/menber-intro.jpg");
+  background-position:center;
+  background-size:cover;
+  text-align: center;
+  padding:50px 0;
+  color:white;
+}
+
+.round{
+  border-radius:50%;
+  position:relative;
+  top: 5%;
+}
+
+.member-intro h2{
+  font-size: 28px;
+  margin-bottom:40px;
+}
+
+.sevasu{
+  margin-bottom:60px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menber-flex{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width:850px;
+  margin:0 auto;
+}
+
+.menber-child{
+  width:46%;
+  margin-bottom:40px;
+  font-size:18px;
+}
+
+.tal{
+  text-align:left;
+} 
+
+.tal-2{
+  text-align:left;
+  padding-bottom:5px;
+}
+
+.member-width{
+  border:3px solid #fff;
+  padding:40px;
+  letter-spacing: 2px;
+}
+
+
+.member-width p{
+  margin-bottom:20px;
+}
+
+/*Q&Aノマドエンジニア*/
+
+.QA-wrapper{
+  background:#ECB94E;
+  text-align: center;
+  color:white;
+  padding-top:50px;
+}
+
+.isogi{
+  max-width:850px;
+  margin:0 auto;
+}
+
+.QA-text{
+  font-size:20px;
+  color:#EBB94D;
+  text-align: center;
+  font-size: 20px;
+  position:absolute;
+  top: 25px;
+  left:15px;
+}
+
+.QA{
+  width:80px;
+  height:80px;
+  margin:0 auto;
+  background-color: #fff;
+  border-radius:50%;
+  position:relative; 
+}
+
+.QA-pdg{
+  padding:20px 0;
+}
+
+.QAh2{
+  font-size:28px;
+  padding:15px;
+  max-width:730px;
+  margin:0 auto;
+  position:relative;
+}
+
+.QAh2::before,.QAh2::after{
+  position:absolute;
+  content:"";
+  width:40px;
+  height:40px;
+}
+
+.QAh2::before{
+  border-top:5px solid #fff;
+  border-left:5px solid #fff;
+  top:0;
+  left:0;
+}
+
+
+.QAh2::before{
+  border-top:5px solid #fff;
+  border-left:5px solid #fff;
+  top:0;
+  left:0;
+}
+
+.QAh2::after{
+  bottom:0;
+  right:0;
+  border-bottom:5px solid #fff;
+  border-right:5px solid #fff;
+}
+
+/*三角形*/
+
+.triangle{
+  width:0;
+  border-top: 25px solid #eab857;
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  margin:0 auto;
+}
+
+.nomad-wrapper{
+  text-align: center;
+  max-width:800px;
+  margin:0 auto;
+  padding-bottom:40px;
+}
+
+.nomad-wrapper h2{
+  font-size:30px;
+  margin:15px 0;
+}
+
+.nomad-bold{
+  font-weight: bold;
+  margin-bottom:20px;
+  font-size: 18px;
+}
+
+.nomad-normal{
+  font-size:18px;
+}
+
+/*実体験 ノマドの感想*/
+
+.nomad-flex{
+  display: flex;
+  margin-top:30px;
+  justify-content: space-between;
+}
+
+.nomad-left{
+  width:30%;
+}
+
+.nomad-left img{
+  width:100%;
+  border:4px solid #eab857;
+}
+
+.nomad-right{
+  width:66%;
+  font-size:18px;
+  text-align:left;
+  margin-top:20px;
+}
+
+.nomad-text{
+  color:#777;
+  line-height:35px;
+  letter-spacing: 1.8px;
+}
+
+.nomad-name{
+  font-style:italic;
+  text-decoration: underline;
+  color:#777;
+}
+
+/*イサラカリキュラム*/
+
+.curriculum{
+  text-align: center;
+  background-image:url("./img/curriculum.jpg");
+  background-size:cover;
+  color:white;
+  padding:60px 0 80px 0;
+}
+
+.curriculum-bold{
+  font-weight:bold;
+  margin-top: 22px;
+  font-size:18px;
+}
+
+.curriculum-title{
+  font-size:30px;
+}
+
+.flex-learning{
+  font-size:18px;
+  font-weight: bold;
+  display: flex;
+  max-width:800px;
+  margin:0 auto;
+  justify-content: space-between;
+  padding-top:55px;
+}
+
+
+.pre-blue{
+  background:#016EA9;
+}
+
+.pre-learning{
+  width:48%;
+}
+
+.pre-learning li{
+  width:70%;
+  text-align: center;
+}
+
+.after-learning{
+  width:48%;
+}
+
+.flex-learning ul{
+  width:100%;
+  margin:0 auto;
+  border-radius:5px;
+}
+
+.flex-learning .pre-blue{
+  color:white;
+  border:4px solid#016EA9;
+}
+
+.flex-learning li{
+  color:black;
+  width:100%;
+  margin:0 auto;
+  padding:10px 0;
+  border-bottom:3px dotted #eee;
+  background:white;
+}
+
+.flex-learning ul li:nth-child(1){
+  background:#016EA9;
+}
+
+.curriculum-support{
+  padding:40px 0 20px 0;
+  background:#016EA9;
+  text-align: center;
+  color:white;
+}
+
+.curriculum-support h2{
+  font-size:24px;
+  margin-bottom:15px;
+}
+/*レッスンの流れ*/
+
+.lesson-flow{
+  padding:50px 0;
+  text-align: center;
+  margin:0 auto;
+}
+
+.lesson-img{
+  margin:50px 0;
+}
+
+lesson-img img{
+  width:100%;
+}
+
+.lesson-child{
+  display:flex;
+  background:#FEF5E0;
+  border-radius:5px;
+  padding:30px 35px 0 20px;
+  max-width: 1150px;
+  margin:0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lesson-child h2{
+  font-size:17px;
+  margin:0px 0 20px 0;
+}
+
+.lesson-icon{
+  width:26%;
+}
+
+.lesson-text{
+  width:1000px;
+  text-align:left;
+}
+
+.lesson-text p{
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.flow-figure{
+  width:80%;
+  margin:0 auto;
+  height:65px;
+}
+
+/*何故バンコクなのか*/
+
+.reason-wrapper{
+  background-image:url("./img/bangkokbg.jpg");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:80px;
+}
+
+.reason-wrapper h2{
+  font-size:28px;
+  line-height:40px;
+  margin-bottom:20px;
+}
+
+.reason-wrapper p{
+  font-size:14px;
+  line-height:22px;
+}
+
+.reason-wrapper h3{
+  font-size:24px;
+}
+
+.reason-pdg{
+  margin:20px 0;
+}
+
+.reason-wrapper li{
+  padding-left:15px;
+  font-size:18px;
+  font-weight: bold;
+}
+
+/*幅を持たせて柔軟に*/
+.reason-width{
+  max-width:1000px;
+  margin:0 auto;
+}
+
+/*イサラプレゼント企画*/
+.isara-present{
+  background:#ECB94D;
+  text-align: center;
+  padding:60px 0;
+}
+
+.present-width{
+  width:1160px;
+  margin:0 auto;
+}
+
+
+.isara-present p{
+  font-size:16px;
+  font-weight: bold;
+}
+
+.isara-present h1{
+  font-size:30px;
+  margin-top:30px;
+}
+
+.isara-present h2{
+  font-size: 26px;
+  margin-bottom:20px;
+}
+
+.isara-present span{
+  color:white;
+}
+
+.fa-gift{
+  color:#000;
+}
+
+.present-flex{
+  display: flex;
+  padding:40px 50px;
+  justify-content: space-between;
+  border-bottom:2px solid #fff;
+}
+
+.present-child{ 
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  background-color: white;
+}
+
+.present-child h2{
+  margin-top:30px;
+  color:#eab94d;
+}
+
+.present-child p{
+  width:75%;
+  margin:0 auto;
+}
+
+
+/*マックスの幅と同じ広さにする*/
+.giji{
+  position:relative;
+  width:1160px;
+}
+
+
+/*線の型どり*/
+.giji::before,.giji::after{
+  content:"";
+  width:200px;
+  height:360px;
+  position:absolute;
+}
+
+/*文字の前から線を作る*/
+.giji::before{
+  border-top:2px solid #fff;
+  border-left:2px solid #fff;
+  top:15px;
+  left:0;
+}
+
+
+/*文字の後ろから線を作る*/
+.giji::after{
+  border-top:2px solid #fff;
+  border-right:2px solid #fff;
+  top:15px;
+  right:0;
+}
+
+
+/*イサラはボランティアではない！*/
+
+.isara-help{
+  background-image:url("./img/help.jpg");
+  background-size: cover;
+  padding:60px 0 40px 0;
+  text-align: center;
+  color:white;
+}
+
+.help-width{
+  max-width:1000px;
+  margin: 0 auto;
+}
+
+.help-width h1{
+  font-size:30px;
+  width:850px;
+  padding:30px 20px;
+  position:relative;
+  margin:0 auto;
+}
+
+/*疑似要素を出す*/
+
+.help-width h1::before,.help-width h1::after{
+  position:absolute;
+  content:"";
+  width:50px;
+  height:50px;
+}
+
+.help-width h1::before{
+  top:0;
+  left:0;
+  border-top:5px solid #fff;
+  border-left:5px solid #fff;
+}
+
+.help-width h1::after{
+  bottom:0;
+  right:0;
+  border-bottom:5px solid #fff;
+  border-right:5px solid #fff;
+}
+
+.help-width h2{
+  font-size: 28px;
+}
+
+
+.help-text1{
+  font-size:20px;
+  font-weight: bold;
+  margin:35px 0 15px 0;
+}
+
+.help-text2{ 
+  font-size:20px;
+  font-weight: bold;
+  margin:15px 0 35px 0;
+}
+
+/*創業者からのメッセージ*/
+
+.isara-create{
+  padding:65px 65px;
+  text-align: center;
+}
+
+.create-width{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.isara-create h1{
+  font-size:28px;
+  margin-bottom:40px;
+}
+
+.isara-create h2{
+  font-size:20px;
+  margin-bottom:40px;
+}
+
+.create-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.isara-create img{
+  max-width:200px;
+}
+
+.create-text{
+  max-width:900px;
+  text-align:left;
+}
+
+.create-text2{
+  margin:30px 0;
+}
+
+/*資料請求フォーム*/
+
+.document-form{
+  background-color: #ECB94D;
+  text-align: center;
+  padding:60px 0;
+}
+
+.form-width h2{
+  font-size:28px;
+  margin-bottom:30px;
+}
+
+.form-text{
+  margin-bottom:25px;
+  font-weight:bold;
+}
+
+.label{
+  max-width:1000px;
+  margin:0 auto;
+  width:100%;
+  display: block;
+  border-radius:7px;
+  border:none;
+  margin-bottom:25px;
+}
+
+input{
+  padding:26px 10px;
+}
+
+textarea{
+  padding:35px 0;
+}
+
+.form-pdg{
+  padding:20px 0;
+}
+
+::placeholder{
+  opacity:0.8;
+  padding-left:10px;
+}
+
+textarea::placeholder{
+  position: relative;
+  bottom:20px;
+}
+
+.documentsend{
+  background-color:#DA6B64;
+  color:white;
+  letter-spacing:20px;
+  font-size: 24px;
+  font-weight: bold;
+  padding:15px 0;
+  border-radius:30px;
+  border:none;
+  max-width:1000px;
+  margin:0 auto;
+  width:100%;
+  display: block;
+}
+
+
+/*よくあるお問い合わせ*/
+
+.many-question{
+  width:1100px;
+  margin:0 auto;
+  text-align:center;
+  padding:60px 0;
+}
+
+.question-title{
+  width:90%;
+  margin:0 auto;
+  font-size: 28px;
+  margin-bottom:50px;
+}
+
+
+
+.many-question li{
+  text-align: left;
+  border:1px solid#eee;
+  margin-bottom:10px;
+  padding:20px;
+}
+
+.many-question li:hover{
+  cursor: pointer;
+}
+
+.many-question p{
+  font-weight: bold;
+  position:relative;
+  width:1000px;
+}
+
+.question-flex p::after{
+  position: absolute;
+  content:"";
+  width:10px;
+  height:10px;
+  border-right:3px solid #ddd;
+  border-bottom:3px solid #ddd;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  right:0px;
+  top:0;
+  transition:all 0.5s;
+}
+
+.open .question-flex p::after{
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.question-flex{
+  font-size:16px;
+  display: flex;
+  align-items: center;
+}
+
+.fa-question-circle{
+  color:#016EA9;
+}
+
+
+/*答えの部分*/
+
+.answer{
+  text-align:left;
+  padding:10px 0;
+  display:none;
+}
+
+.answer p{
+  margin-left:15px;
+}
+
+.open .answer{
+  display:block;
+}
+
+
+
+/*フッター*/
+
+#footer{
+  text-align: center;
+  background:#ECECEC;
+  font-size: 10px;
+  padding:40px 0 20px 0;
+}
+
+.footer-text{
+  margin-bottom: 20px;
+}
+
+.footer-text1{
+  margin-top:20px;
+}
+
+
+/*トップボタン作成*/
+
+#page-top{
+  position:fixed;
+  bottom:50px;
+  right:50px;
+  font-size:12px;
+  z-index:10;
+}
+
+#page-top a{
+  background-color:#999;
+  width:100px;
+  padding:30px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#page-top a:hover{
+  opacity:0.7;
+}
+
+
+/*レスポンシブ*/
+.division{
+  display: none;
+}
+
+.division li{
+  width:90%;
+  background-color:#FEF5E0;
+  margin:0 auto;
+  padding:20px;
+  margin-bottom:10px;
+}
+
+
+.small{
+  width:35px;
+  height:35px;
+  margin-right:15px;
+}
+
+.div-bold{
+  font-size:18px;
+  font-weight: bold;
+  width:565px;
+  text-align:left;
+  position:relative;
+}
+
+.answer2{
+  width:90%;
+  margin:0 auto;
+  background-color:#FEF5E0;
+  position:relative;
+  top:-10px;
+  padding:20px;
+  font-size:12px;
+  text-align:left;
+  display: none;
+} 
+
+.open .answer2{
+  display: block;
+}
+
+
+.sub-answer1{
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom: 16px;
+}

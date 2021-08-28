@@ -1,0 +1,547 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+}
+
+body {
+    line-height:1.5;
+    letter-spacing:1.5px;
+}
+
+nav,ul {
+    list-style:none;
+}
+
+*{
+box-sizing: border-box
+}
+
+/*↑ここまでリセットcss*/
+
+
+@media (max-width:790px){
+    
+    /*ヘッダー部分*/
+
+    .header-right{
+        display:none
+    }
+    
+    .header-document{
+        display: block;
+    }
+
+    /*メイン部分*/
+
+    /*width45%がかかっているのでそれを解除してあげる
+    ↓
+    広げて１行にしてあげる。    
+    */
+
+    .document-pdtb{
+        width:70%;
+    }
+
+    .bcw{
+        width:100%;
+        margin:0 auto;
+    }
+
+    /*エンジニアとしての自由を手に入れるためには*/
+
+    .second-wrapper{
+        width:100%;
+        margin:0 auto;
+     
+    }
+
+    .second-wrapper p{
+        font-size:16px;
+        letter-spacing: 1.5px;
+      }
+
+    .test{
+        width:98%;
+    }
+
+    /*ノマド育成講座iSara*/
+
+    .test2{
+        width:98%;
+    }
+
+    .skill-flex{
+        width:95%;
+        font-size:12px;
+    }
+
+    /*イサラでは基本的な事は教えない*/
+
+    .teach-title{
+        font-size:18px;
+    }
+
+    .teach-title-sub{
+        font-size:13px;
+    }
+
+    .step-flex{
+        display: block;
+    }
+
+    .title-pdg{
+        padding:0;
+    }
+
+    .isara-step p{
+        margin:0;
+    }
+
+    .isara-step{
+        width:60%;
+        margin:0 auto;
+        padding-top:10px;
+        margin-bottom:40px;
+    }
+
+    .four,.six{
+        font-size: 12px;
+        padding:10px 0;
+    }
+
+    .blue-explain h2{
+        font-size: 14px;
+    }
+
+    /*イサラで学べる事*/
+
+    .isara-learn h2{
+        font-size:20px;
+    }
+
+    .learn-text p{
+        font-size:16px;
+        max-width:370px;
+        margin:0 auto;
+        line-height:26px;
+        padding-bottom:20px;
+    }
+
+    /*イサラで学べる3つの事*/
+
+    .merit-text{
+        width:90%;
+    }
+
+    .merit-text1{
+        font-size:15px;
+    }
+
+    .merit-text2{
+        font-size:18px;
+    }
+
+    /*フレックス解除*/
+
+    .merit-flex{
+        display: block;
+        width:90%;
+        margin:0 auto;
+        padding-top:25px;
+        
+    }
+
+    .merit-child{
+        width:100%;
+        padding-bottom:50px;
+        margin:0 auto;
+    }
+
+    .merit-color{
+        font-size:15px;
+        text-align: center;
+        margin-bottom:10px;
+    }
+
+    .merit-sub{
+        font-size: 13px;
+        text-align:left;
+        width:90%;
+        margin:0 auto;
+    }
+
+    .support{
+        width:95%;
+    }
+
+    .support h2{
+        font-size:17px;
+    }
+
+    .support h3{
+        font-size: 15px;
+    }
+
+    .support p{
+        font-size: 10px;
+    }
+
+    .support-text{
+        width:92%;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /*創業メンバー*/
+
+    .mennber-intro h2{
+        font-size:18px;
+    }
+
+    .sevasu{
+        font-size:12px;
+    }
+
+    .menber-flex{
+        display: block;
+        max-width:90%;
+        margin:0 auto;
+    }
+
+    .menber-child{
+        width:95%;
+        margin:0 auto;
+    }
+
+    .round{
+        width:130px;
+        height:130px;
+        margin:0 auto;
+        top:30px;
+    }
+
+    .member-width{
+        padding:20px 20px;
+    }
+
+    .member-width p{
+        font-size:12px;
+    }
+
+    /*ノマドエンジニアとして～*/
+
+    .isogi{
+        width:90%;
+        margin:0 auto;
+    }
+
+    .nomad-wrapper{
+        width:95%;
+    }
+
+    .nomad-wrapper h2{
+        font-size:18px;
+    }
+
+    .nomad-bold{
+        font-size:12px;
+    }
+
+    .nomad-normal{
+        font-size:12px;
+        width:50%;
+        margin:0 auto;
+        padding-top:10px;
+    }
+
+    .nomad-right{
+        margin-top:0;
+    }
+
+    /*イサラで学べる内容*/
+
+    .curriculum{
+        padding:40px 0;
+    }
+
+    .curriculum-title{
+        font-size: 18px;
+    }
+
+    .curriculum-bold{
+        font-size:16px;
+    }
+
+    .flex-learning{
+        display: block;
+        width:98%;
+        margin:0 auto;
+        font-size: 13px;
+    }
+    .pre-learning,.after-learning{
+        width:70%;
+        margin:0 auto;
+        margin-bottom:20px;
+    }
+
+    .curriculum-support{
+        padding:20px 0 15px 0;
+        background:#016EA9;
+        text-align: center;
+        color:white;
+    } 
+
+    .curriculum-support h2{
+        font-size:17px;
+        margin-bottom:5px;
+    }
+
+    /*受講の流れ*/
+    
+    .none{
+        display: none;
+    }
+
+    .division{
+        display: block;
+    }
+
+    .lesson-flow h2{
+        margin-bottom:30px;
+    }
+
+    /*何故バンコクなのか*/
+    
+    .reason-wrapper{
+        background-position:left;
+        padding-bottom:40px;
+    }
+
+    .reason-width{
+        max-width:100%;
+    }
+
+    .reason-width h2{
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .reason-width li{
+        font-size: 14px;
+        margin-bottom:10px;
+    }
+
+    .reason-width h3{
+        font-size:15px;
+    }
+
+    /*プレゼント企画*/
+
+    .present-width{
+        width:90%;
+    }
+
+    .present-width h2{
+        font-size:18px;
+    }
+
+    .present-width p{
+        font-size:12px;
+        width:70%;
+        margin: 0 auto;
+    }
+
+    .present-width h1{
+        font-size:18px;
+        margin: 0 auto;
+        width:500px;
+    }
+
+    .present-flex{
+        display: block;
+        padding:20px 0;
+        border:none;
+        outline: none;
+    }
+
+    .present-child{
+        display: flex;
+        margin:0 auto;
+        justify-content: space-between;
+        width:100%;
+        width:480px;
+        height:60px;
+        background:none;
+        margin-bottom:10px;
+        align-items: center;
+    }
+
+    .present-child h2{
+        position:relative;
+        font-size:13px;
+        margin-top:0;
+        z-index:10;
+        left:10px;
+        top:10px;
+    }
+
+    .present-child span{
+        position:absolute;
+        background:white;
+        width:0px;
+        height:60px;
+        border-radius:50%;
+    }
+
+    .present-child p{
+        text-align:left;
+        color:white;
+    }
+
+    /*スマホ版での疑似要素*/
+    .giji{
+        width:500px;
+    }
+
+    .giji::before,.giji::after{
+        content:"";
+        width:40px;
+        height:250px;
+        position:absolute;
+    }
+
+    .giji::before{
+        border-top:2px solid #fff;
+        border-left:2px solid #fff;
+        top:15px;
+        left:-20px;
+    }
+
+    .giji::after{
+        border-top:2px solid #fff;
+        border-right:2px solid #fff;
+        top:15px;
+        right:0;
+    }
+
+    .clear{
+        width:520px;
+        height:1px;
+        background-color:white;
+        position:relative;
+        top:-10px;
+        left:70px;
+    }
+
+    /*イサラはボランティアではありません*/
+
+    .isara-help h2{
+        font-size: 18px;
+    }
+
+    .isara-help p{
+        font-size: 12px;
+        
+    }
+
+    .help-width h1{
+        width:80%;
+        margin:0 auto;
+        font-size: 18px;
+    }
+
+    .help-text2{
+        font-size: 12px;
+    }
+
+    /*創業者からのメッセージ*/
+
+    .isara-create{
+        padding:30px 20px;
+    }
+
+    .isara-create h1{
+        font-size:18px;
+    }
+
+    .isara-create h2{
+        font-size: 15px;
+        width:43%;
+        margin:0 auto;
+        padding-bottom:20px;
+    }
+
+    .create-flex{
+        display: block;
+    }
+
+    .isara-create img{
+        width:100%;
+        max-width:1000px;
+        margin:0 auto;
+    }
+
+    .c1{
+        margin-bottom:10px;
+    }
+
+    .c2{
+        margin-bottom:40px;
+    }
+
+    /*ドキュメントフォーム*/
+
+    .document-form h2{
+        font-size:18px;
+    }
+
+    .document-form p{
+        font-size:14px;
+    }
+
+    .label{
+        width:90%;
+        margin:0 auto;
+        margin-bottom:20px;
+    }
+
+    .documentsend{      
+        width:90%;
+    }
+
+    /*よくある質問*/
+
+
+    .many-question{
+        width:100%;
+        margin:0 auto;
+    }
+
+    .many-question li{
+        width: 90%;
+        margin:0 auto;
+        margin-bottom:5px;
+        padding:6px;
+
+    }
+
+    .answer h3{
+        max-width:900px;
+        width:85%;
+        margin:0 auto;
+    }
+}
